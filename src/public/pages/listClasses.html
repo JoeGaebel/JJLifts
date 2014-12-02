@@ -1,0 +1,40 @@
+<div data-ng-init="update()">
+	<h3>Browse Classes</h3>
+	<div ng-model="date" id="datepicker" ng-select="listClasses()"/><br><br>
+		<table class="table">
+			<tr>
+				<td>
+					<b>Class</b>
+				</td>
+				<td>
+					<b>Instructor</b>
+				</td>
+				<td>
+					<b>Location</b>
+				</td>
+				<td>
+					<b>Start Time</b>
+				</td>
+				<td>
+					<b>Duration</b>
+				</td>
+			</tr>
+			<tr ng-repeat="class in classes">
+				<td>
+					{{class.FCName}}
+				</td>
+				<td>
+					{{class.FName+" "+class.LName}}
+				</td>
+				<td>
+					{{class.Location}}
+				</td>
+				<td>
+					{{class.StartTime}}
+				</td>
+				<td>
+					{{class.Hours_Minutes+" hour(s)"}}
+				</td>
+			</tr>
+		</table>
+	</div>

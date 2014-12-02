@@ -1,0 +1,25 @@
+<div>
+<h3>Personal Training Appointments</h3>
+Enter staff information:<br>
+First Name: <input name="input" ng-model="FName"> <br>
+Last Name: <input name="input" ng-model="LName"> <br><br>
+<button ng-click="checkApp()">
+ Submit
+</button><br><br>
+<b>{{response}}</b>
+<br><br>
+<table class="table">
+	<tr>
+		<td>Appointment with</td>
+		<td>Time</td>
+	</tr>
+			<tr ng-repeat="staff in staffs">
+				<td>
+					{{staff.FName+" "+staff.LName}}
+				</td>
+				<td>
+					{{staff.Time}}
+				</td>
+			</tr>
+		</table>
+</div>

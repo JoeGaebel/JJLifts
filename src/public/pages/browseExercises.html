@@ -1,0 +1,26 @@
+<div data-ng-init="update()">
+	<h3>Browse Exercises</h3>
+	Select a muscle group:  <select ng-change="browse()" ng-model="combo">
+		<option value="abs">Abs</option>
+		<option value="biceps">Biceps</option>
+		<option value="chest">Chest</option>
+		<option value="triceps">Triceps</option>
+	</select>
+	<br>
+	<br>
+
+	<table class="table">
+		<tr>
+			<td><b>Exercise Name</b></td>
+			<td><b>Equipment</b></td>
+		</tr>
+		<tr ng-repeat="exercise in exercises">
+			<td>
+					{{exercise.ExerciseName}}
+			</td>
+			<td>
+					{{exercise.EquipmentName}}
+			</td>
+		</tr>
+	</table>
+</div>
